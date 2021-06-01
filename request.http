@@ -1,0 +1,53 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"aka2",
+    "password": "aka"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "aka1",
+    "password": "aka"
+}
+
+### 
+
+POST http://localhost:5000/api/posts/
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDk2MDhjNDQzZWVjYjMxNWNhNDgyODMiLCJpYXQiOjE2MjA0NDUzOTN9.WSx8JuDJChPje05tubIbCEVc1FNzMtW55t791odo6A0
+
+{
+    "title": "JS",
+    "description": "React",
+    "url": "google.com",
+    "status": ""
+}
+
+###
+
+GET http://localhost:5000/api/posts/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDk2MDhjNDQzZWVjYjMxNWNhNDgyODMiLCJpYXQiOjE2MjA1NDczMzh9.7t7QseCRAXxu5-bqfWgBnIG183DOqQ4Sc5O86SNmui4
+
+### 
+PUT http://localhost:5000/api/posts/6096093df477b42758012d54
+Content-Type: Application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDk2MDhjNDQzZWVjYjMxNWNhNDgyODMiLCJpYXQiOjE2MjA1NDczMzh9.7t7QseCRAXxu5-bqfWgBnIG183DOqQ4Sc5O86SNmui4
+
+{
+    "title":"hoangdaheo",
+    "description": "heohoangda",
+    "url": "hoangdaheo.com",
+    "status": ""
+}
+
+### 
+DELETE http://localhost:5000/api/posts/6096093df477b42758012d54
+Content-Type: Application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDk2MDhjNDQzZWVjYjMxNWNhNDgyODMiLCJpYXQiOjE2MjA1NDczMzh9.7t7QseCRAXxu5-bqfWgBnIG183DOqQ4Sc5O86SNmui4
+
